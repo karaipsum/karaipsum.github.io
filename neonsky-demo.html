@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NeonSky Variable</title>
+    <meta name="description" content="">
+    <meta name="author" content="catloaf / 猫面包">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Code edited from https://demos.tyfromtheinternet.com/leaguemonovariable/
+        Thank you for the reference! -->
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            'use strict';
+
+            $("#fsize").on("input", function () {
+                $('#testarea').css("font-size", $(this).val() + "px");
+            });
+
+            $("#weight").on("input", function () {
+                $('#testarea').css("font-weight", $(this).val());
+            });
+
+            $("#width").on("input", function () {
+                $('#testarea').css("font-variation-settings", "'wdth'" + $(this).val());
+            });
+            // Sample text rand weight and width
+            $(".sample").each(function (index, li) {
+                let text = $(li);
+                text.css("font-weight", Math.floor(Math.random() * 800 + 100));
+                text.css("font-variation-settings", "'wdth'" + Math.floor(Math.random() * 100 + 100));
+            });
+            // frac feature toggle
+            $("#frac").on("click", function () {
+                if ($(this).is(":checked")) {
+                    $("#fraction").addClass("frac")
+                }
+                else { $("#fraction").removeClass("frac") }
+            });
+            // onum feature toggle
+            $("#onum").on("click", function () {
+                if ($(this).is(":checked")) {
+                    $("#oldstyle-figures").addClass("onum")
+                }
+                else { $("#oldstyle-figures").removeClass("onum") }
+            });
+            // tnum feature toggle
+            $("#tnum").on("click", function () {
+                if ($(this).is(":checked")) {
+                    $("#tabular-figures").addClass("tnum")
+                }
+                else { $("#tabular-figures").removeClass("tnum") }
+            });
+            // case feature toggle
+            $("#case").on("click", function () {
+                if ($(this).is(":checked")) {
+                    $("#case-sensitive").addClass("case")
+                }
+                else { $("#case-sensitive").removeClass("case") }
+            });
+
+        });
+    </script>
+</head>
+
+
+<body>
+
+    <header id="title">
+        <h1 data-splitting>NeonSky</h1>
+        <script>Splitting()</script>
+        <h2>A <a href="https://fonts.google.com/knowledge/glossary/variable_fonts" target="_blank">variable font</a> inspired by Solution Nine in Final Fantasy XIV.
+        </h2>
+        <div id="download"><a href="https://github.com/karaipsum/NeonSky-Font" target="_blank">Download</a></div>
+    </header>
+
+    <section id="tester">
+        <h2 id="section-title">Try it yourself!</h2>
+        <div id="variable-tester">
+            <p id="testarea" spellcheck="false" contenteditable="true">
+                A quick brown fox jumps over the lazy dog. ABCabc012345
+            </p>
+        </div>
+        <div id="variable-slider">
+            <span>size</span>
+            <input class="none" type="range" min="12" max="80" value="30" id="fsize" step="0.01">
+            <span>weight</span>
+            <input class="none" type="range" min="100" max="900" value="500" id="weight" step="0.01">
+            <span>width</span>
+            <input class="none" type="range" min="100" max="200" value="100" id="width" step="0.01">
+        </div>
+    </section>
+
+    <section id="sample-text">
+        <h3>Sample texts appeared in <a href="https://www.youtube.com/watch?v=riOrSqKzqgM" target="_blank">Solution
+                Nine</a>. (Refresh to load new weight and width.)</h3>
+        <ul>
+            <li class="sample">SOLUTION IX</li>
+            <li class="sample">Elevators</li>
+            <li class="sample">News</li>
+            <li class="sample">Employment</li>
+            <li class="sample">Soul Supply</li>
+            <li class="sample">Arcadion</li>
+            <li class="sample">Vanguard</li>
+            <li class="sample">Origenics</li>
+            <li class="sample">Alexandria</li>
+            <li class="sample">Interior Designworks</li>
+        </ul>
+    </section>
+
+    <section id="features">
+        <h3>NeonSky supports Opentype features!</h3>
+        <p>I would highly suggest trying tools like <a href="https://wakamaifondue.com/" target="_blank">Wakamai
+                Fondue</a> to test the supported features.</p>
+        <!-- frac feature -->
+        <h4>Fraction<span class="code">frac</span>,<span class="code">numr</span>,<span class="code">dnom</span></h4>
+        <div class="fea">
+            <div id="fraction">1/3 2/5 6/7 123/456</div>
+        </div>
+        <input type="checkbox" id="frac" class="toggleCheckbox" />
+        <label for="frac" class='toggleContainer'>
+            <div>OFF</div>
+            <div>ON</div>
+        </label>
+
+        <!-- onum feature -->
+        <h4>Oldstyle Figures<span class="code">onum</span></h4>
+        <div class="fea">
+            <div id="oldstyle-figures">3.14159265358979</div>
+        </div>
+        <input type="checkbox" id="onum" class="toggleCheckbox" />
+        <label for="onum" class='toggleContainer'>
+            <div>OFF</div>
+            <div>ON</div>
+        </label>
+
+        <!-- tnum feature -->
+        <h4>Tabular Figures<span class="code">tnum</span></h4>
+        <div class="fea">
+            <div id="tabular-figures">3.14159265358979</div>
+        </div>
+        <input type="checkbox" id="tnum" class="toggleCheckbox" />
+        <label for="tnum" class='toggleContainer'>
+            <div>OFF</div>
+            <div>ON</div>
+        </label>
+
+        <!-- case feature -->
+        <h4>Case-Sensitive Forms<span class="code">case</span></h4>
+        <div class="fea">
+            <div id="case-sensitive">(¿¡[Emet]-{Selch!?}*)</div>
+        </div>
+        <input type="checkbox" id="case" class="toggleCheckbox" />
+        <label for="case" class='toggleContainer'>
+            <div>OFF</div>
+            <div>ON</div>
+        </label>
+
+
+    </section>
+
+    <section id="addendum">
+        <h4>Addendum</h4>
+        <p>As a big fan of folklore in the game <a href="https://finalfantasyxiv.com/" target="_blank">Final Fantasy XIV</a>, it's very excited for me to see a new typeface in use in the new city <i>Solution Nine</i> introduced in Dawntrail.</p>
+        <p>I've previously developed other fonts (feel free to check <a href="https://github.com/karaipsum" target="_blank">my GitHub</a>!) But it's really my first time developing a variable font from scratch. It's super fun but also challenging at the same time. (Next time I'll know to develop the masters from the extreme point instead of from the middle.)</p>
+        <p>NeonSky is developed in <a href="https://glyphsapp.com/" target="_blank">Glyphs</a>. It has five masters (Thin, Thin Ultra Expanded, Medium, Medium Ultra Expanded and Black) and 22 instances as static fonts generated via interpolation. If you are using a software that support variable font, I highly recommend using the VF version of the font.</p>
+        <p>Also it's really my first time developing a web page. I learned a lot of HTML/CSS and even some JS code from scratch, thanks to <a href="https://stackoverflow.com/" target="_blank">stackoverflow</a>, <a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/" target="_blank">MDN</a>, and last but not least, designers and developers of <a href="https://github.com/theleagueof/league-mono" target="_blank">League Mono</a>. I feel very shameful that I borrowed <strong>a lot of</strong> design and script snipet from the <a href="https://demos.tyfromtheinternet.com/leaguemonovariable/" target="_blank">demo page</a> of League Mono. I would not be able to make this demo page without this reference.</p>
+        <p>I'm also happy to release the font under <a href="https://openfontlicense.org/" target="_blank">the SIL Open Font License</a> v1.1, with Reserved Font Name NeonSky. Feel free to give me feedback, and I would appreciate a <a href="https://ko-fi.com/catloaf97" target="_blank">Ko-Fi</a> if you want to :)</p>
+        <p>And again, special thanks to <a href="https://club.huijiwiki.com/wiki/%E7%89%B9%E6%AE%8A:%E9%A9%BE%E9%A9%B6%E5%AE%A4#/user/45979/main" target="_blank">Celes</a>/<a href="https://weibo.com/u/3506214112" target="_blank">@时与悠可</a> for datamining and collecting reference pictures.</p>
+        <p>All company, product, and system names mentioned herein are trademarks or registered trademarks of their respective companies.</p>
+        <p style="text-align: right;">catloaf/猫面包</p>
+    </section>
+
+</body>
+
+
+</html>

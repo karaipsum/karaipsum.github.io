@@ -1,0 +1,552 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+@font-face {
+    font-family: "NeonSky VF Medium";
+    src: url("webfonts/NeonSky-VF.woff2") format('woff2');
+}
+
+
+@font-face {
+    font-family: 'LeagueMono';
+    src: url('webfonts/LeagueMono-VF.woff2') format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+#title {
+    background: #1c3c5d;
+    color: #c9fbff;
+    padding: 7vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
+    font-family: 'LeagueMono', sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    text-rendering: geometricPrecision;
+    background: whitesmoke;
+}
+
+/* paragraph style */
+
+#features p {
+    font-size: 0.5em;
+    line-height: 2em;
+    max-width: 900px;
+    padding: 5vw;
+}
+
+/* hyperlink style */
+
+#features a {
+    text-decoration: none;
+    display: inline-block;
+    color: #222;
+    padding: 0px 0.2rem;
+    box-shadow: 0px 1px 0px #43d0ffc5;
+}
+
+#features a:hover {
+    background: #91e3ff;
+    color: #1c3c5d;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#features a:active {
+    color: #222;
+}
+
+h3 a {
+    text-decoration: none;
+    display: inline-block;
+    color: #222;
+    padding: 0px 0.2rem;
+    box-shadow: 0px 1px 0px #43d0ffc5;
+}
+
+h3 a:hover {
+    background: #91e3ff;
+    color: #1c3c5d;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+h3 a:active {
+    color: #222;
+}
+
+#title h2 a {
+    text-decoration: none;
+    color: #c9fbff;
+    padding: 2px 0.2rem;
+}
+
+#title a:hover {
+    background: #91e3ffc5;
+    box-shadow: 0px 1px 0px #43d0ffc5;
+    color: #1c3c5d;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#title a:active {
+    color: #c9fbff;
+}
+
+#addendum a {
+    text-decoration: none;
+    display: inline-block;
+    color: whitesmoke;
+    padding: 0px 0.2rem;
+    box-shadow: 0px 1px 0px #43d0ffc5;
+}
+
+#addendum a:hover {
+    background: #91e3ff;
+    color: #1c3c5d;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#addendum a:active {
+    color: whitesmoke;
+}
+
+
+
+/* Title section */
+h1 {
+    font-family: "NeonSky VF Medium", sans-serif;
+    font-weight: 500;
+    font-size: 14vw;
+    line-height: 17vw;
+    text-shadow: 1px 3px 2px #dc3ceb65, 0px 0px 3px #4ff9ffce;
+}
+
+/* Code snipet edited from https://codepen.io/michellebarker/pen/bPEWGK */
+
+#title h1 .char {
+    --delay: calc((var(--char-index) + 1) * 400ms);
+    animation: breathe 4000ms infinite both;
+    animation-delay: var(--delay);
+}
+
+#title h1:hover span {
+    animation-play-state: paused;
+}
+
+@keyframes breathe {
+    0% {
+        font-variation-settings: 'wght' 100, 'wdth' 100;
+        color: #e9feff;
+    }
+
+    60% {
+        font-variation-settings: 'wght' 500, 'wdth' 150;
+        color: #c9fbff;
+    }
+
+    100% {
+        font-variation-settings: 'wght' 100, 'wdth' 100;
+        color: #e9feff;
+    }
+}
+
+#title h2 {
+    font-weight: 400;
+    font-size: 2vw;
+    line-height: 4vw;
+}
+
+#download a{
+    user-select: none;
+    text-decoration: none;
+    position: relative;
+    margin-top: 3vw;
+    display: inline-block;
+    font-family: "LeagueMono";
+    font-size: 2vw;
+    font-weight: 400;
+    font-feature-settings: 'wdth' 200;
+    color: whitesmoke;
+    border: 2vw solid #3ac5f0;
+    background: #3ac5f0;
+}
+#download a:hover{
+    color: rgb(235, 250, 255);
+    border: 2vw solid #1f58f5;
+    background: #1f58f5;
+    box-shadow: 0 0.5vw 0 #00c3ff;
+}
+#download a:active{
+    color: whitesmoke;
+}
+
+
+h3 {
+    background: #7bfbff8a;
+    color: #222;
+    font-size: 0.3em;
+    font-variation-settings: "wght" 450, "wdth" 80;
+    line-height: 1.6em;
+    top: 2em;
+    width: 17em;
+    padding: 1em;
+    position: sticky;
+    margin-left: 2em;
+    z-index: 3;
+    display: block;
+}
+
+#features h4 {
+    margin-left: 2vw;
+    font-weight: 500;
+    font-size: 0.7em;
+}
+
+.code {
+    display: inline-block;
+    background-color: grey;
+    color: whitesmoke;
+    font-weight: 700;
+    padding: 0.1em 0.2em;
+    margin: 0 0.5em;
+    border: 2px solid #42424242;
+    border-radius: 5px;
+}
+
+.fea {
+    background-color: #daf6ff;
+    color: #1c3c5d;
+    padding: 25px;
+    margin: 2vw;
+    font-family: "NeonSky VF Medium";
+    text-align: center;
+    font-weight: 500;
+    font-size: 5vw;
+}
+
+/* Toggle Switch */
+/* https://hudecz.medium.com/how-to-create-a-pure-css-toggle-button-2fcc955a8984 */
+
+.toggleContainer {
+    user-select: none;
+    position: relative;
+    margin-left: auto;
+    margin-right: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+    border: 3px solid #1c3c5d;
+    border-radius: 1em;
+    background: #1c3c5d;
+    font-weight: 500;
+    font-size: 3vw;
+    color: #1c3c5d;
+    cursor: pointer;
+}
+
+.toggleContainer::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    border-radius: 1em;
+    background: white;
+    transition: all 0.3s;
+}
+
+.toggleCheckbox:checked+.toggleContainer::before {
+    left: 50%;
+}
+
+.toggleContainer div {
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.toggleCheckbox {
+    display: none;
+}
+
+.toggleCheckbox:checked+.toggleContainer div:first-child {
+    color: white;
+    transition: color 0.3s;
+}
+
+.toggleCheckbox:checked+.toggleContainer div:last-child {
+    color: #1c3c5d;
+    transition: color 0.3s;
+}
+
+.toggleCheckbox+.toggleContainer div:first-child {
+    color: #1c3c5d;
+    transition: color 0.3s;
+}
+
+.toggleCheckbox+.toggleContainer div:last-child {
+    color: white;
+    transition: color 0.3s;
+}
+
+
+/* Opentype features css */
+/* https://helpx.adobe.com/fonts/using/open-type-syntax.html */
+.frac {
+    font-variant-numeric: diagonal-fractions;
+    -moz-font-feature-settings: "frac";
+    -webkit-font-feature-settings: "frac";
+    font-feature-settings: "frac";
+}
+
+.onum {
+    font-variant-numeric: oldstyle-nums;
+    -moz-font-feature-settings: "onum";
+    -webkit-font-feature-settings: "onum";
+    font-feature-settings: "onum";
+}
+
+.tnum {
+    font-variant-numeric: tabular-nums;
+    -moz-font-feature-settings: "tnum";
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+}
+
+.case {
+    text-transform: uppercase;
+    -moz-font-feature-settings: "case";
+    -webkit-font-feature-settings: "case";
+    font-feature-settings: "case";
+}
+
+/* Sample Text */
+
+#sample-text {
+    background: #093755;
+    padding-bottom: 10vw;
+}
+
+.sample {
+    user-select: none;
+    font-family: "NeonSky VF Medium";
+    text-align: center;
+    font-size: 9vw;
+    line-height: 12vw;
+    color: whitesmoke;
+    text-shadow: 0px 2px 3px #ee56da93, 1px 2px 2px #42e3ff9a ;
+    
+}
+
+/* addendum */
+#addendum {
+    padding: 5vw;
+    margin-top: 2vw;
+    background: #1c4e5d;
+    color: whitesmoke;
+    position: relative;
+}
+#addendum h4{
+    font-size: 1em;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+#addendum p {
+    font-family: "LeagueMono", "PingFang SC", "冬青黑体简体中文", "Courier", sans-serif;
+    font-weight: 300;
+    font-size: 0.6em;
+    line-height: 1.5em;
+    max-width: 900px;
+    margin-bottom: 0.8em;
+}
+
+/* Test area */
+#tester {
+    padding: 4vw;
+    margin-bottom: 2vw;
+    background: whitesmoke;
+    color: #1c4e5d;
+    position: relative;
+}
+
+#tester h2 {
+    margin-left: 2vw;
+    font-weight: 600;
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+
+#variable-tester {
+    padding: 1.5vw;
+    margin-top: 2vw;
+    margin-bottom: 5vw;
+    background: #1c4e5d;
+    color: whitesmoke;
+    font-family: "NeonSky VF Medium";
+    font-size: 30px;
+}
+
+#variable-slider {
+    line-height: 0.5em;
+    text-align: center;
+    position: sticky;
+    font-size: 0.4em;
+}
+
+#variable-slider span {
+    font-weight: 200;
+    font-size: 1em;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+#variable-slider input {
+    margin-right: 25px;
+}
+
+#variable-slider input[type="range"] {
+    border: 0.1em solid #1c4e5d;
+    height: 0;
+    position: relative;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+}
+
+#variable-slider input[type="range"]:focus {
+    outline: none;
+}
+
+#variable-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 1em;
+    width: 0.7em;
+    background: #1c4e5d;
+    cursor: pointer;
+}
+
+/* Responsiveness */
+@media only screen and (max-width:1023px) {
+    #sample-text {
+        padding: 20px;
+        padding-bottom: 50px;
+    }
+
+    #features {
+        padding: 20px;
+    }
+
+    h3 {
+        margin-left: -20px;
+    }
+
+    #variable-slider {
+        top: 20px;
+        left: 20px;
+    }
+
+    #variable-slider input {
+        top: 10px;
+    }
+
+    #variable-tester {
+        margin-bottom: 50px;
+    }
+
+    #variable-slider input {
+        display: block;
+        margin: 0 auto 25px;
+        width: 90%;
+    }
+}
