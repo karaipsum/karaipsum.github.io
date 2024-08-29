@@ -274,7 +274,7 @@ h1 {
 h3 {
     background: #7bfbff8a;
     color: #222;
-    font-size: 0.3em;
+    font-size: 0.6em;
     font-variation-settings: "wght" 450, "wdth" 80;
     line-height: 1.6em;
     top: 2em;
@@ -474,7 +474,7 @@ h3 {
     background: #1c4e5d;
     color: whitesmoke;
     font-family: "NeonSky VF Medium";
-    font-size: 30px;
+    font-size: 45px;
 }
 
 #variable-slider {
