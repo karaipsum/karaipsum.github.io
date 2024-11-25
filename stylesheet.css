@@ -74,6 +74,7 @@ input {
     outline: 0;
     vertical-align: baseline;
     background: transparent;
+    color: #181626;
 }
 
 ul {
@@ -84,6 +85,15 @@ ul {
 @font-face {
     font-family: "NeonSky VF Medium";
     src: url("webfonts/NeonSky-VF.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "NeonSky Stencil VF Medium";
+    src: url("webfonts/NeonSky-Stencil-VF.woff2") format('woff2');
+}
+
+.Stencil {
+    font-family: 'NeonSky Stencil VF Medium';
 }
 
 
@@ -98,12 +108,20 @@ ul {
 }
 
 #title {
-    background: #1c3c5d;
+    /* background: #1c3c5d; */
+    background: rgb(8,32,64);
+    background: linear-gradient(55deg, rgba(8,32,64,1) 0%, rgba(14,91,158,1) 80%, rgba(23,113,191,1) 100%);
     color: #c9fbff;
     padding: 7vw;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+#features {
+    /* padding: 2vw; */
+    padding-bottom: 3vw;
+    background: whitesmoke;
 }
 
 body {
@@ -118,10 +136,10 @@ body {
 /* paragraph style */
 
 #features p {
-    font-size: 0.5em;
+    font-size: 0.6em;
     line-height: 2em;
     max-width: 900px;
-    padding: 5vw;
+    padding: 2vw;
 }
 
 /* hyperlink style */
@@ -148,31 +166,34 @@ body {
 h3 a {
     text-decoration: none;
     display: inline-block;
-    color: #222;
+    font-variation-settings: "wght" 800, "wdth" 100;
+    color: #E2FFFC;
     padding: 0px 0.2rem;
     box-shadow: 0px 1px 0px #ff43d3c5;
 }
 
 h3 a:hover {
     background: #ff91f0;
-    color: #222;
+    color: #E2FFFC;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 h3 a:active {
-    color: #222;
+    color: #E2FFFC;
 }
 
 #title h2 a {
     text-decoration: none;
     color: #c9fbff;
     padding: 2px 0.2rem;
+    font-variation-settings: "wght" 800, "wdth" 100;
+    /* box-shadow: 0px 1px 0px #ff43d3c5; */
 }
 
 #title a:hover {
     background: #91e3ffc5;
-    box-shadow: 0px 1px 0px #43d0ffc5;
+    box-shadow: 0px 3px 0px #66E4F2;
     color: #1c3c5d;
     cursor: pointer;
     transition: all 0.3s;
@@ -185,14 +206,14 @@ h3 a:active {
 #addendum a {
     text-decoration: none;
     display: inline-block;
-    color: whitesmoke;
+    color: #181626;
     padding: 0px 0.2rem;
-    box-shadow: 0px 1px 0px #43d0ffc5;
+    box-shadow: 0px 1px 0px #1621F2;
 }
 
 #addendum a:hover {
     background: #91e3ff;
-    color: #1c3c5d;
+    color: #181626;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -201,7 +222,11 @@ h3 a:active {
     color: whitesmoke;
 }
 
-
+#style-change-bar {
+    position: fixed;
+    right: 0;
+    z-index: 9;
+}
 
 /* Title section */
 h1 {
@@ -209,7 +234,8 @@ h1 {
     font-weight: 500;
     font-size: 14vw;
     line-height: 17vw;
-    text-shadow: 1px 3px 2px #dc3ceb65, 0px 0px 3px #4ff9ffce;
+    /* text-shadow: 0px 0px 7px #092d75ea, 1px 3px 5px #ff53a9b7, -1px -2px 3px #7ef2ffd7; */
+    text-shadow: 1px 3px 5px #ff53a9b7, -1px -2px 3px #7ef2ffd7;
 }
 
 /* Code snipet edited from https://codepen.io/michellebarker/pen/bPEWGK */
@@ -220,9 +246,9 @@ h1 {
     animation-delay: var(--delay);
 }
 
-#title h1:hover span {
+/* #title h1:hover span {
     animation-play-state: paused;
-}
+} */
 
 @keyframes breathe {
     0% {
@@ -245,6 +271,7 @@ h1 {
     font-weight: 400;
     font-size: 2vw;
     line-height: 4vw;
+    color: #c9fbff;
 }
 
 #download a{
@@ -256,17 +283,17 @@ h1 {
     /* font-family: "LeagueMono"; */
     font-family: "Space Grotesk", sans-serif;
     font-size: 2vw;
-    font-weight: 400;
-    font-feature-settings: 'wdth' 200;
+    font-weight: 800;
+    /* font-feature-settings: 'wght' 800,'wdth' 200; */
     color: whitesmoke;
-    border: 2vw solid #3ac5f0;
-    background: #3ac5f0;
+    border: 2vw solid #23A5D9;
+    background: #23A5D9;
 }
 #download a:hover{
-    color: rgb(235, 250, 255);
-    border: 2vw solid #1f58f5;
-    background: #1f58f5;
-    box-shadow: 0 0.5vw 0 #00c3ff;
+    color: #082359;
+    border: 2vw solid #49D3F2;
+    background: #49D3F2;
+    box-shadow: 0 0.5vw 2px #F23D91;
 }
 #download a:active{
     color: whitesmoke;
@@ -274,8 +301,8 @@ h1 {
 
 
 h3 {
-    background: #ff77f18a;
-    color: #222;
+    background: #102622;
+    color: #E2FFFC;
     font-size: 0.6em;
     font-variation-settings: "wght" 450, "wdth" 80;
     line-height: 1.6em;
@@ -286,12 +313,21 @@ h3 {
     margin-left: 2em;
     z-index: 3;
     display: block;
+    box-shadow: 0 0.5vw 0 #F23D91;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
 }
 
 #features h4 {
     margin-left: 2vw;
     font-weight: 500;
     font-size: 0.7em;
+    margin-right: auto;
 }
 
 .code {
@@ -307,7 +343,7 @@ h3 {
 
 .fea {
     background-color: #daf6ff;
-    color: #1c3c5d;
+    /* color: #1c3c5d; */
     padding: 25px;
     margin: 2vw;
     font-family: "NeonSky VF Medium";
@@ -335,11 +371,58 @@ h3 {
     border-radius: 1em;
     background: #1c3c5d;
     font-weight: 500;
-    font-size: 3vw;
+    font-size: 0.7em;
     color: #1c3c5d;
     cursor: pointer;
     margin-bottom: 1vh;
 }
+
+/* Style change bar setting */
+
+#style-change-bar .toggleContainer {
+    font-size: 4vw;
+    width: fit-content;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    background: #00c3ff;
+    border: 3px solid #00c3ff;
+}
+
+#style-change-bar .toggleCheckbox:checked + .toggleContainer {
+    background: #c41cad;
+    border-color: #c41cad;
+}
+
+#style-change-bar .toggleContainer div:first-child {
+    font-family: 'NeonSky VF Medium';
+}
+#style-change-bar .toggleContainer div:last-child {
+    font-family: 'NeonSky Stencil VF Medium';
+}
+#style-change-bar .toggleContainer div {
+    padding: 0rem 1rem;
+}
+
+#style-change-bar .toggleCheckbox:checked+.toggleContainer div:first-child {
+    color: white;
+    transition: color 0.3s;
+}
+
+#style-change-bar .toggleCheckbox:checked+.toggleContainer div:last-child {
+    color: #73385E;
+    transition: color 0.3s;
+}
+
+#style-change-bar .toggleCheckbox+.toggleContainer div:first-child {
+    color: #082359;
+    transition: color 0.3s;
+}
+
+#style-change-bar .toggleCheckbox+.toggleContainer div:last-child {
+    color: white;
+    transition: color 0.3s;
+}
+
 
 .toggleContainer::before {
     content: '';
@@ -354,6 +437,11 @@ h3 {
 
 .toggleCheckbox:checked+.toggleContainer::before {
     left: 50%;
+}
+
+.toggleCheckbox:checked + .toggleContainer {
+    background: #c41cad;
+    border-color: #c41cad;
 }
 
 .toggleContainer div {
@@ -385,6 +473,7 @@ h3 {
     color: white;
     transition: color 0.3s;
 }
+
 
 
 /* Opentype features css */
@@ -420,7 +509,9 @@ h3 {
 /* Sample Text */
 
 #sample-text {
-    background: #093755;
+    /* background: #093755; */
+    background: rgb(8,35,89);
+background: linear-gradient(56deg, rgba(8,35,89,1) 0%, rgba(70,2,115,1) 28%, rgba(166,60,118,1) 80%);   
     padding-bottom: 10vw;
 }
 
@@ -432,15 +523,18 @@ h3 {
     line-height: 12vw;
     color: whitesmoke;
     text-shadow: 0px 2px 3px #ee56da93, 1px 2px 2px #42e3ff9a ;
-    
+}
+
+.sample.Stencil {
+    font-family: "NeonSky Stencil VF Medium"
 }
 
 /* addendum */
 #addendum {
     padding: 5vw;
     margin-top: 2vw;
-    background: #1c4e5d;
-    color: whitesmoke;
+    background: #49D3F2;
+    /* color: whitesmoke; */
     position: relative;
 }
 #addendum h4{
@@ -452,7 +546,7 @@ h3 {
 #addendum p {
     /* font-family: "LeagueMono", "PingFang SC", "冬青黑体简体中文", "Courier", sans-serif; */
     font-family: "Space Grotesk", "PingFang SC", "冬青黑体简体中文", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 0.6em;
     line-height: 1.5em;
     max-width: 900px;
@@ -462,9 +556,10 @@ h3 {
 /* Test area */
 #tester {
     padding: 4vw;
-    margin-bottom: 2vw;
+    padding-bottom: 5vw;
     background: whitesmoke;
-    color: #1c3c5d;
+    /* background: whitesmoke;
+    color: #1c3c5d; */
     /* position: relative; */
 }
 
@@ -473,6 +568,7 @@ h3 {
     font-weight: 600;
     font-size: 0.8em;
     line-height: 1.5em;
+    
 }
 
 ::selection {
@@ -484,10 +580,15 @@ h3 {
     padding: 1.5vw;
     margin-top: 2vw;
     margin-bottom: 5vw;
-    background:#1c3c5d;
-    color: whitesmoke;
+    /* background:#1c3c5d; */
+    background: rgb(9,33,64);
+    background: linear-gradient(53deg, rgba(9,33,64,1) 0%, rgba(8,35,89,1) 100%);
     font-family: "NeonSky VF Medium";
     font-size: 45px;
+}
+
+#testarea {
+    color: whitesmoke;
 }
 
 #variable-slider {
@@ -529,7 +630,7 @@ h3 {
     border: none;
     height: 1em;
     width: 0.7em;
-    background: #ea1ace;
+    background: #F23D91;
     cursor: pointer;
 }
 
