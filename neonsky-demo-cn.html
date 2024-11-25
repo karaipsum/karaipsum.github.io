@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 
 <head>
     <meta charset="UTF-8">
-    <title>NeonSky Variable</title>
+    <title>NeonSky 可变字体家族</title>
     <meta name="description" content="">
     <meta name="author" content="catloaf / 猫面包">
     <link rel="icon" type="image/svg+xml" href="./favicon.svg">
@@ -116,34 +116,40 @@
     <header id="title">
         <h1 data-splitting>NeonSky</h1>
         <script>Splitting()</script>
-        <h2><a href="https://fonts.google.com/knowledge/glossary/variable_fonts" target="_blank">Variable fonts</a>
-            inspired by Solution Nine in Final Fantasy XIV.
+        <h2>基于 最终幻想XIV 中 九号解决方案区域风格设计的<a href="https://fonts.google.com/knowledge/glossary/variable_fonts"
+                target="_blank">可变字体家族</a>
         </h2>
         <div id="download"><a href="https://github.com/karaipsum/NeonSky-Font" target="_blank">Download</a></div>
     </header>
 
     <section id="tester">
-        <h2 id="section-title">Try it yourself!</h2>
+        <h2 id="section-title">输入文字测试一下吧！</h2>
         <div id="variable-tester">
             <p id="testarea" spellcheck="false" contenteditable="true">
                 A quick brown fox jumps over the lazy dog. ABCabc012345
             </p>
         </div>
         <div id="variable-slider">
-            <span>size: <span id="fsizeVar">30</span>px</span>
-            <input class="none" type="range" min="12" max="80" value="30" id="fsize" step="0.1">
+            <div class="slider-container">
+                <span>字号: <span id="fsizeVar">30</span>px</span>
+                <input class="none" type="range" min="12" max="80" value="30" id="fsize" step="0.1">
+            </div>
             <!-- <span>line height: <span id="lHVar">40</span>px</span>
             <input class="none" type="range" min="22" max="90" value="40" id="lheight" step="0.1"> -->
-            <span>weight: <span id="wghtVar">500</span></span>
-            <input class="none" type="range" min="100" max="900" value="500" id="weight" step="1">
-            <span>width: <span id="wdthVar">100</span></span>
-            <input class="none" type="range" min="100" max="200" value="100" id="width" step="1">
+            <div class="slider-container">
+                <span>字重: <span id="wghtVar">500</span></span>
+                <input class="none" type="range" min="100" max="900" value="500" id="weight" step="1">
+            </div>
+            <div class="slider-container">
+                <span>宽度: <span id="wdthVar">100</span></span>
+                <input class="none" type="range" min="100" max="200" value="100" id="width" step="1">
+            </div>
         </div>
     </section>
 
     <section id="sample-text">
-        <h3>Sample texts appeared in <a href="https://www.youtube.com/watch?v=riOrSqKzqgM" target="_blank">Solution
-                Nine</a>. (Refresh to load new weight and width.)</h3>
+        <h3>一些出现在<a href="https://ff14-eo.web.sdo.com/20240927dawntrail/world/SolutionNine.mp4"
+                target="_blank">九号解决方案</a>区域的文字样本，可以刷新页面产生新的字重与宽度组合。</h3>
         <ul>
             <li class="sample">SOLUTION IX</li>
             <li class="sample">Elevators</li>
@@ -159,17 +165,17 @@
     </section>
 
     <section id="features">
-        <h3>NeonSky supports Opentype features!</h3>
-        <p>I would highly suggest trying tools like <a href="https://wakamaifondue.com/" target="_blank">Wakamai
-                Fondue</a> to test the supported features.</p>
+        <h3>NeonSky 支持 Opentype 特性！</h3>
+        <p>建议使用 <a href="https://wakamaifondue.com/" target="_blank">Wakamai
+                Fondue</a> 等工具测试支持的特性。</p>
         <!-- frac feature -->
         <div class="feature-container">
-            <h4>Fraction<span class="code">frac</span>,<span class="code">numr</span>,<span class="code">dnom</span>
+            <h4>分数<span class="code">frac</span>,<span class="code">numr</span>,<span class="code">dnom</span>
             </h4>
             <input type="checkbox" id="frac" class="toggleCheckbox" />
             <label for="frac" class='toggleContainer'>
-                <div>OFF</div>
-                <div>ON</div>
+                <div>关</div>
+                <div>开</div>
             </label>
         </div>
 
@@ -180,11 +186,11 @@
 
         <!-- onum feature -->
         <div class="feature-container">
-            <h4>Oldstyle Figures<span class="code">onum</span></h4>
+            <h4>旧体数字<span class="code">onum</span></h4>
             <input type="checkbox" id="onum" class="toggleCheckbox" />
             <label for="onum" class='toggleContainer'>
-                <div>OFF</div>
-                <div>ON</div>
+                <div>关</div>
+                <div>开</div>
             </label>
         </div>
 
@@ -196,11 +202,11 @@
 
         <!-- tnum feature -->
         <div class="feature-container">
-            <h4>Tabular Figures<span class="code">tnum</span></h4>
+            <h4>表格数字（等宽数字）<span class="code">tnum</span></h4>
             <input type="checkbox" id="tnum" class="toggleCheckbox" />
             <label for="tnum" class='toggleContainer'>
-                <div>OFF</div>
-                <div>ON</div>
+                <div>关</div>
+                <div>开</div>
             </label>
         </div>
         <div class="fea" contenteditable="true">
@@ -211,11 +217,11 @@
 
         <!-- case feature -->
         <div class="feature-container">
-            <h4>Case-Sensitive Forms<span class="code">case</span></h4>
+            <h4>大小写敏感形式<span class="code">case</span></h4>
             <input type="checkbox" id="case" class="toggleCheckbox" />
             <label for="case" class='toggleContainer'>
-                <div>OFF</div>
-                <div>ON</div>
+                <div>关</div>
+                <div>开</div>
             </label>
         </div>
         <div class="fea" contenteditable="true">
@@ -228,44 +234,38 @@
     </section>
 
     <section id="addendum">
-        <h4>Addendum</h4>
-        <p>As a big fan of the folklore in the game <a href="https://finalfantasyxiv.com/" target="_blank">Final Fantasy
-                XIV</a>, I’m really excited to see a new typeface being used in the new city <i>Solution Nine</i>,
-            introduced in Dawntrail.</p>
+        <h4>后记</h4>
 
-        <p>I’ve previously developed other fonts (feel free to check out <a href="https://github.com/karaipsum"
-                target="_blank">my GitHub</a>!), but this is my first time developing a variable font from scratch. It’s
-            been super fun, but also challenging at the same time. (Next time, I’ll make sure to develop the masters
-            starting from the extreme points instead of from the middle.)</p>
+        <p><a href="https://finalfantasyxiv.com/" target="_blank" ]>最终幻想
+                XIV</a>游戏内的剧情设定一直非常吸引我，在看到新版本第二主城——<strong>九号解决方案</strong>中出现了新的字体让我很激动。</p>
 
-        <p>NeonSky was developed in <a href="https://glyphsapp.com/" target="_blank">Glyphs</a>. It has five masters
-            (Thin, Thin Ultra Expanded, Medium, Medium Ultra Expanded, and Black) and 22 instances as static fonts
-            generated via interpolation. If you’re using software that supports variable fonts, I highly recommend using
-            the VF version of the font.</p>
+        <p>此前我也制作了几款其他的字体（可以在<a href="https://github.com/karaipsum"
+                target="_blank">我的GitHub</a>查看）。不过从头制作可变字体还是头一回。很有趣但是也很有挑战性。至少下次我知道得从可变轴极值开始制作母版，而不是从中间的母版开始了（</p>
 
-        <p>It’s also my first time developing a web page. I learned a lot of HTML, CSS, and even some JavaScript from
-            scratch, thanks to <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>, <a
-                href="https://css-tricks.com/" target="_blank">CSS-Tricks</a>, <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/" target="_blank">MDN</a>, and, last but not
-            least, the designers and developers of <a href="https://github.com/theleagueof/league-mono"
-                target="_blank">League Mono</a>. I feel a little guilty for borrowing <strong>a lot of</strong> design
-            and script snippets from the <a href="https://demos.tyfromtheinternet.com/leaguemonovariable/"
-                target="_blank">demo page</a> of League Mono. I wouldn’t have been able to create this demo page without
-            this reference.</p>
+        <p>NeonSky 在<a href="https://glyphsapp.com/"
+                target="_blank">Glyphs</a>中制作完成。共有五个母版（极细、极细加宽体、中等、中等加宽体与特粗），通过插值生成共计 22
+            个静态字体。如果你使用的软件支持可变字体，我非常建议使用可变字体（后缀为 VF）版本。</p>
 
-        <p>I’m also happy to release the font under the <a href="https://openfontlicense.org/" target="_blank">SIL Open
-                Font License</a> v1.1, with the Reserved Font Name NeonSky. Feel free to give me feedback, and if you’d
-            like, I’d really appreciate a <a href="https://ko-fi.com/catloaf97" target="_blank">Ko-Fi</a> :)</p>
+        <p>同时，这也是我第一次开发网页。从头学习了很多 HTML/CSS/JS 代码，多亏了<a href="https://stackoverflow.com/" target="_blank">Stack
+                Overflow</a>, <a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a>, <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/" target="_blank">MDN</a>，以及<a
+                href="https://github.com/theleagueof/league-mono" target="_blank">League Mono</a>的设计师与开发者。以及我很惭愧，从
+            League Mono 的<a href="https://demos.tyfromtheinternet.com/leaguemonovariable/"
+                target="_blank">测试网页</a>中借用了<strong>很多</strong>的设计与代码，没有这个网页的参考，我也做不出这个网页。</p>
 
-        <p>And again, special thanks to <a
+        <p>本字体家族以<a href="https://openfontlicense.org/" target="_blank">SIL Open Font License</a> v1.1 开源，保留字体名为 NeonSky
+            与 NeonSky Stencil。欢迎给我提供建议，同时也欢迎给我打赏<a href="https://ko-fi.com/catloaf97" target="_blank">Ko-Fi</a> :)</p>
+
+        <p>以及，再次特别感谢<a
                 href="https://club.huijiwiki.com/wiki/%E7%89%B9%E6%AE%8A:%E9%A9%BE%E9%A9%B6%E5%AE%A4#/user/45979/main"
-                target="_blank">Celes</a>/[@时与悠可](https://weibo.com/u/3506214112) for datamining and collecting
-            reference pictures.</p>
+                target="_blank">Celes</a>/<a href="https://weibo.com/u/3506214112"
+                target="_blank">@时与悠可</a>的数据挖掘与参考资料的整理。</p>
 
-        <p>All company, product, and system names mentioned herein are trademarks or registered trademarks of their
-            respective companies.</p>
+        <p>文中提到的所有公司、产品和系统名称均为其各自公司的商标或注册商标。</p>
 
         <p style="text-align: right;"><a href="https://linktr.ee/catloaf97" target="_blank">catloaf/猫面包</a></p>
+
+
 
     </section>
 
